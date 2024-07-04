@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Sitesi</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .no-padding {
+            padding: 0 !important;
+        }
+        .no-margin {
+            margin: 0 !important;
+        }
+    </style>
+</head>
+<body style="background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);">
+    <!-- Header Section -->
+    <header class="bg-dark text-white p-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Site Title -->
+                <div class="col-sm-12">
+                    <p class="h1 text-center">Blog Sitesi</p>
+                </div>
+                <!-- Navigation Menu -->
+                <div class="col-sm-12">
+                    <nav>
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item"><a class="nav-link text-white" href="index.html">Ana Sayfa</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="post1.html">Paris'te Bir Gün</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="post2.html">Tokyo Maceraları</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Jumbotron Section -->
+    <div class="jumbotron" style=" margin-bottom: 0">
+        <div class="container">
+          <h1 class="display-3">Sıradaki maceranıza hazır mısınız?</h1>
+          <p>Yeni destinasyonları keşfetme, yeni yemekleri deneme ve farklı kültürleri deneyimleme yolculuğuma katılın. Dünyanın dört bir yanından seyahat ilhamı, ipuçları ve hikayeleri için hazırlanın!"</p>
+          <p><a class="btn btn-info btn-lg" href="#" role="button">Daha fazla bilgi için »</a></p>
+        </div>
+      </div>
+    
+    <!-- Main Content Section -->
+    <main class="container-fluid bg-success">
+        <section>
+            <h2 class="p-4 text-dark-emphasis"><strong>Son Gönderiler</strong></h2>
+            <!-- Row for articles -->
+            <div class="row mt-3 justify-content-center">
+                <!-- Column for first article -->
+                <div class="col-sm-4">
+                    <article class="card mb-4 text-center">
+                        <div class="card-body ">
+                            <img src="https://picsum.photos/id/43/200/300" height="500" width="200" class="card-img-top" alt="Seyahat 1">
+                            <h3 class="card-title"><a href="post1.html">Paris'te Bir Gün</a></h3>
+                            <p class="card-text">Bu, Paris'te geçirdiğim bir günün özetidir. Daha fazlasını okumak için başlığa tıklayın...</p>
+                        </div>
+                    </article>
+                </div>
+                <!-- Column for second article -->
+                <div class="col-sm-4">
+                    <article class="card mb-4 text-center">
+                        
+                        <div class="card-body">
+                            <img src="https://picsum.photos/id/33/200/300" height="500" width="200" class="card-img-top" alt="Seyahat 2">
+                            <h3 class="card-title"><a href="post2.html">Tokyo Maceraları</a></h3>
+                            <p class="card-text">Bu, Tokyo'da yaşadığım maceranın özetidir. Daha fazlasını okumak için başlığa tıklayın...</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Blog Sitesi</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
