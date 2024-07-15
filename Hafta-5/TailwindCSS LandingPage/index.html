@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mamba Landing Page</title>
+  <!-- Link to Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Link to Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="mx-9 bg-gray-100">
+    <header class="bg-white m-3">
+      <nav>
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <!-- Logo -->
+          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="https://img.logoipsum.com/223.svg" class="h-8" alt="Logo" />
+          </a>
+          <!-- Navigation Links -->
+          <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+            <ul class="flex flex-col font-medium mt-4  md:space-x-8 md:flex-row">
+              <li>
+                <a href="#" class="block py-2 px-3 md:p-0" aria-current="page">Link</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3 md:p-0" aria-current="page">Link</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 px-3 md:p-0" aria-current="page">Link</a>
+              </li>
+              <li>
+                <!-- Sign up button -->
+                <button class="block py-2 px-3 md:p-1 rounded-lg bg-purple-700 text-white">Sign up</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main> 
+        <section class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8  p-4"> 
+            <div class=" bg-white p-9">
+                <!-- Section title and description -->
+                <h6 class="text-purple-700 font-semibold text-center mb-4">Mamba design system</h6>
+                <h1 class="text-5xl font-bold text-center pb-9">Build it with Mamba</h1>
+                <p class="text-lg text-black-600 text-center font-semibold p-5">Modular and versatile. The ultimate design toolkit for savvy technology startups.</p>
+                <!-- Form for joining the waitlist -->
+                <form class="space-y-3">
+                    <input type="text" placeholder="Your name" class="w-full border border-gray-300 p-2 rounded">
+                    <input type="email" placeholder="Email address" class="w-full border border-gray-300 p-2 rounded">
+                    <button class="bg-purple-600 text-white py-2 px-4 rounded w-full">Join the waitlist</button>
+                </form>
+            </div> 
+            <!-- Image next to the form -->
+            <div>
+                <img src="https://via.placeholder.com/1900x1300" alt="Mamba Design System" class="rounded shadow-md">
+            </div>
+        </section>
+    </main>
+
+    <section class="py-12">
+        <div class="container mx-auto text-center">
+            <!-- Section heading -->
+            <h6 class="text-purple-600 font-bold p-5">HOW IT WORKS</h6>
+            <h2 class="text-3xl font-bold mb-8 p-5">Building with Mamba is simple</h2>
+            <!-- Three steps of how it works -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded shadow">
+                    <button class="text-white text-2xl  rounded-full bg-purple-700 px-4">1</button>
+                    <h3 class="font-bold mb-2">Nulla</h3>
+                    <p class="text-gray-700">Nostrum, corrupti blanditiis. Illum, architecto?</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow">
+                    <button class="text-white text-2xl  mb-4 rounded-full bg-purple-700 px-4">2</button>
+                    <h3 class="font-bold mb-2">Accusantium</h3>
+                    <p class="text-gray-700">Vitae saepe atque neque sunt eius dolor veniam alias debitis?</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow">
+                    <button class="text-white text-2xl  mb-4 rounded-full bg-purple-700 px-4">3</button>
+                    <h3 class="font-bold mb-2">Maxime</h3>
+                    <p class="text-gray-700">Expedita temporibus culpa reprehenderit doloribus consectetur odio!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+        <!-- Image Section -->
+        <div>
+            <img src="https://via.placeholder.com/1900x1300" alt="Blurred City Lights" class="object-cover h-full w-full">
+        </div>
+        <!-- Testimonial Section -->
+        <div class="bg-white p-9 items-center">
+            <div class="text-center">
+                <!-- Profile image and testimonial text -->
+                <div class="mb-4">
+                    <div class="inline-block bg-gray-200 rounded-full p-3">
+                        <img src="https://via.placeholder.com/1900x1300" alt="Profile Image" class="h-12 w-12 rounded-full">
+                    </div>
+                </div>
+                <p class="text-lg italic text-gray-700 mb-4">"Et, dignissimos obcaecati. Recusandae praesentium doloribus vitae? Rem unde atque mollitia!"</p>
+                <p class="text-gray-900 font-semibold">Leroy Jenkins</p>
+                <p class="text-gray-500">CEO of Company Co.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="bg-white m-9"> 
+        <div class="container mx-auto grid grid-cols-1 gap-8 p-5">
+            <!-- Create with us section -->
+            <div class="p-6">
+                <h2 class="text-3xl font-bold mb-9">Create with us</h2>
+                <p class="text-gray-700 mb-8 text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt facilis quod accusantium beatae cum nam adipisci reiciendis omnis possimus error quo animi voluptas magni, at incidunt. Nulla ex at ullam corporis quidem adipisci vitae, perferendis dolorem libero minus atque tenetur enim pariatur cupiditate commodi in beatae, ipsa eligendi? Quis, saepe.</p>
+            </div>
+        </div>
+    </section>
+   
+    <section class="m-9 bg-white">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            <!-- Image and content together -->
+            <div class="grid grid-cols-1 gap-8">
+                <img src="https://via.placeholder.com/1900x1300" alt="Image">
+            </div>
+            <div class="bg-white p-6 flex flex-col h-full">
+                <button class="bg-purple-700 text-white font-bold py-2 px-4 rounded-full w-max">
+                    Business
+                </button>
+                <p class="font-bold text-3xl mt-4 p-2">Curating a workplace that <br>inspires team movement</p>
+                <p class="text-gray-500 mt-auto">November 30, 2020</p>
+                <p class="text-gray-500">By Leroy Jenkins</p>
+            </div>   
+        </div>
+    </section>
+  
+    <div class="grid grid-cols-3 p-6 m-9 gap-5">
+        <!-- Three feature boxes -->
+        <div class="bg-white p-6 rounded shadow">
+            <p class="font-bold">Panel-based blocks</p>
+            <p class="text-gray-700">Flexible panels that are perfect for building functional layouts.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+            <p class="font-bold">Responsive design</p>
+            <p class="text-gray-700">Panels look great no matter the device.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+            <p class="font-bold">Premium support</p>
+            <p class="text-gray-700">Join over 50,000 satisfied customers who use our templates.</p>
+        </div>
+    </div>
+
+    <section class="bg-white p-6 m-9">
+        <div class="container mx-auto text-center">
+            <!-- Final call-to-action section -->
+            <h2 class="text-3xl text-blue-900 font-bold mb-4">Our team is here to help you.</h2>
+            <a href="#" class="text-purple-600 mb-8 inline-block">Meet our crew ></a>
+            <img src="https://via.placeholder.com/1200x300" alt="Team" class="rounded shadow mx-auto">
+        </div>
+    </section>
+
+    <footer class="bg-white p-6 m-9">
+        <div class="container mx-auto flex justify-between items-center text-left font-bold border-gray-900 border-3">
+            <p class="text-gray-700">Mamba</p>
+            <div class="flex space-x-4">
+                <!-- Footer social media links -->
+                <a href="mailto:your-email@example.com" class="text-gray-700">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://twitter.com/yourprofile" class="text-gray-700" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://github.com/yourprofile" class="text-gray-700" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
