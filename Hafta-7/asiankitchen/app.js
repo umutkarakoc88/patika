@@ -1,4 +1,3 @@
-// Menu data array with objects for each menu item
 const menu = [
   {
     id: 1,
@@ -74,83 +73,55 @@ const menu = [
   },
 ];
 
-// Select the section where menu items will be displayed
-const sectionCenter = document.querySelector('.section-center');
+let btnDiv = document.getElementById("btn-div");
+let contentDiv = document.getElementById("content-div");
+let all = document.createElement("button");
+const btns = ["All"];
 
-// Select the container for filter buttons
-const btnContainer = document.querySelector('.btn-container');
+document.addEventListener("DOMContentLoaded", () => {
+  menu.forEach((item) => {
+    if (!btns.includes(item.category)) {
+      btns.push(item.category);
+    }
+  });
 
-// Log selected elements to console for debugging
-console.log("sectionCenter:", sectionCenter);
-console.log("btnContainer:", btnContainer);
+  btns.forEach((category) => {
+    let btn = document.createElement("button");
+    btn.textContent = category;
+    btn.classList.add("btn-item");
+    btn.addEventListener("click", () => {
+      items(category);
+    });
+    btnDiv.appendChild(btn);
+  });
 
-// Event listener for when the DOM content is fully loaded
-window.addEventListener('DOMContentLoaded', function () {
-  displayMenuItems(menu); // Display all menu items on initial load
-  displayMenuButtons(); // Display filter buttons on initial load
+  items("All");
 });
 
-// Function to display menu items
-function displayMenuItems(menuItems) {
-  // Map through the menu items and create HTML structure for each item
-  let displayMenu = menuItems.map(function (item) {
-    return `<article class="menu-items col-lg-6 col-sm-12">
-              <img src=${item.img} alt=${item.title} class="photo" />
-              <div class="menu-info">
-                <div class="menu-title">
-                  <h4>${item.title}</h4>
-                  <h4 class="price">${item.price}</h4>
-                </div>
-                <div class="menu-text">
-                  ${item.desc}
-                </div>
-              </div>
-            </article>`;
-  }).join(''); // Join the array into a single string
-  
-  // Set the inner HTML of the section to display the menu items
-  sectionCenter.innerHTML = displayMenu;
+
+function items(category) {
+  contentDiv.innerHTML = "";
+  menu.forEach((item) => {
+    if (category === "All" || item.category === category) {
+      showItem(item);
+    }
+  });
 }
 
-// Function to display filter buttons
-function displayMenuButtons() {
-  // Reduce the menu array to get unique categories
-  const categories = menu.reduce(function (values, item) {
-    if (!values.includes(item.category)) {
-      values.push(item.category);
-    }
-    return values;
-  }, ['All']); // Include 'All' as a default category
-
-  // Map through categories and create button for each
-  const categoryBtns = categories.map(function (category) {
-    return `<button class="btn btn-outline-dark btn-item" type="button" data-id=${category}>
-              ${category}
-            </button>`;
-  }).join(''); // Join the array into a single string
-  
-  // Set the inner HTML of the button container to display the buttons
-  btnContainer.innerHTML = categoryBtns;
-  
-  // Select all filter buttons
-  const filterBtns = btnContainer.querySelectorAll('.btn-item');
-  
-  // Add event listeners to each filter button
-  filterBtns.forEach(function (btn) {
-    btn.addEventListener('click', function (e) {
-      const category = e.currentTarget.dataset.id; // Get the category from the clicked button
-      const menuCategory = menu.filter(function (menuItem) {
-        if (menuItem.category === category) {
-          return menuItem; // Return items matching the selected category
-        }
-      });
-      
-      // Display all items if 'All' is selected, otherwise display filtered items
-      if (category === 'All') {
-        displayMenuItems(menu);
-      } else {
-        displayMenuItems(menuCategory);
-      }
-    });
-  });
+function showItem(item) {
+  let menuItems = document.createElement("div");
+  menuItems.classList.add("menu-items");
+  menuItems.innerHTML = `
+    <img src="${item.img}" alt="${item.title}" class="photo">
+    <div class="menu-info">
+      <div class="menu-title">
+        <h4>${item.title}</h4>
+        <h4 class="price">${item.price}</h4>
+      </div>
+      <div class="menu-text">
+        ${item.desc}
+      </div>
+    </div>
+  `;
+  contentDiv.appendChild(menuItems);
 }
